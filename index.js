@@ -8,7 +8,6 @@ const PORT = process.env.PORT || 5000
 
 // API KEY pk_1bb06023916a4c8093d29b42fb4518a3
 // Create call_api function
-// company news/last/10
 function call_api(finishedAPI) {
     request('https://cloud.iexapis.com/stable/stock/fb/quote?token=pk_1bb06023916a4c8093d29b42fb4518a3',{json: true}, (err, res, body) => {
     if (err) {

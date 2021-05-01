@@ -1,6 +1,21 @@
-<h1>This is my first handlebar page.</h1>
-<p>{{ stock }}</p>
+<div class="jumbotron">
+    <h1 class="display-4">
+        {{ stock.companyName }} ({{ stock.symbol }})
+    </h1>
+    <hr class="my-4">
+    <p><strong>Latest Price: </strong>U${{ stock.latestPrice }} ({{ stock.latestTime }})</p>
+    <p><strong>Change: </strong>U${{ stock.change }}</p>
+    <p><strong>Change %: </strong>{{ stock.changePercent}}%</p>
+    <p><strong>YTD Change: </strong>{{ stock.ytdChange }}%</p>
+    <p><strong>Price / Earnings: </strong>{{ stock.peRatio }}</p>
+    <p><strong>Company Market Cap</strong>{{ stock.marketCap }}</p>
+    <p><strong>Market: </strong>U${{ stock.primaryExchange }}</p>
+    <p><strong>52 Weeks High: </strong>U${{ stock.week52High }}</p>
+    <p></p><strong>52 Weeks Low: </strong>U${{ stock.week52Low }}</p>
+</div>
 
+<!--
 {{#each stock}}
     {{@key}} - {{this}}<br/>
 {{/each}}
+-->
